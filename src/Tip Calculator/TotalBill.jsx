@@ -7,7 +7,7 @@ const TotalBill = ({ bill, setBill }) => {
       <div>
         <h3>How much was the bill?</h3>
         <input
-          value={!bill ? 0 : bill}
+          value={bill}
           onChange={(e) => setBill(e.target.value)}
           type="text"
         />

@@ -3,8 +3,9 @@ const Result = ({ data }) => {
   return (
     <div>
       <h1>
-        YOU PAY ${false ? 0 : Number.parseFloat(total)} (${bill}+$
-        {false ? 0 : Math.floor(billInPercent)} Tip)
+        YOU PAY ${bill ? Number.parseFloat(total) : 0} ($
+        {bill ? Number.parseFloat(bill) : 0}+$
+        {billInPercent ? Number.parseFloat(billInPercent) : 0} Tip)
       </h1>
       <button onClick={() => setBill(0)}>Reset</button>
     </div>
